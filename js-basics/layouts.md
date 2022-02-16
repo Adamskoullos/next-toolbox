@@ -15,14 +15,14 @@ This layout component accepts a `children` props object:
 `/components/layout/Layout.jsx`:
 
 ```jsx
-import TopNav from './TopNav';
-import classes from './Layout.module.css'
+import TopNav from "./TopNav";
+import classes from "./Layout.module.css";
 
-function Layout (props) {
-    <>
-        <TopNav />
-        <main className={classes.main}>{props.children}</main>
-    </TopNav>
+function Layout(props) {
+  <>
+    <TopNav />
+    <main className={classes.main}>{props.children}</main>
+  </>;
 }
 
 export default Layout;
