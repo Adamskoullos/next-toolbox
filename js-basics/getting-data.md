@@ -6,8 +6,6 @@ On pages that use data that does not change we can get this data at build time a
 
 For pages that use changing data we can either fetch the data at run time on the server and add to the html before the page is served or serve the html and then fetch the data on the client. The most effective approach here is to quickly serve the pre-rendered html and show loaders while fetching the data on the client.
 
-s
-
 ## getStaticProps
 
 The `getStaticProps` is a method that can be exported from within specific `page` components in order to get the data required for that page. This function is run at build time and is only available on the server.
