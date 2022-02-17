@@ -53,3 +53,16 @@ import Link from "next/link";
   {token.symbol}
 </Link>;
 ```
+
+Programmatic routing:
+
+```js
+import { useRouter } from "next/router";
+
+// within component
+const router = useRouter();
+
+function handleRoute() {
+  router.push(`/news/${article.id}`);
+}
+```
