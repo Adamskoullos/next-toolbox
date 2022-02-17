@@ -15,13 +15,11 @@
 
 - [Pages and routing structure](https://github.com/Adamskoullos/next-toolbox/blob/main/js-basics/pages-routing-structure.md)
 - [Layouts](https://github.com/Adamskoullos/next-toolbox/blob/main/js-basics/layouts.md)
-- [Styles]()
+- [Styles](https://github.com/Adamskoullos/next-toolbox/blob/main/js-basics/styles.md)
+- [Getting data]()
 
 ---
 
-- [Programmatic navigation]()
-- [Custom components and styling]()
-- [getStaticProps]()
 - [getServerSideProps]()
 - [getStaticProps and getStaticPaths]()
 - [working API routes]()

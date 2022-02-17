@@ -16,6 +16,8 @@ Directly within the component, inside the root element.
 
 CSS Modules:
 
+**Note**: to use SCSS instead we just need to add SASS: `npm install sass`
+
 ```
 /components
   /News
