@@ -17,12 +17,10 @@
 - [Layouts](https://github.com/Adamskoullos/next-toolbox/blob/main/js-basics/layouts.md)
 - [Styles](https://github.com/Adamskoullos/next-toolbox/blob/main/js-basics/styles.md)
 - [Getting data](https://github.com/Adamskoullos/next-toolbox/blob/main/js-basics/getting-data.md)
+- [working API routes]()
 
 ---
 
-- [getServerSideProps]()
-- [getStaticProps and getStaticPaths]()
-- [working API routes]()
 - [Head]()
 - [Fallback pages]()
 - [Deployment]()
