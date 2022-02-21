@@ -24,7 +24,7 @@ This pre-fetches the data at build time, rendering html and data so fully built 
 
 **Note**:
 
-`incremental static generation` can be added as an option by adding the `revalidate` prop and giving it a value in `seconds`. In the example below the page is rebuilt on the server every 60 seconds each time refetching the data. this allows static pages to be used in situations where changing data is used.
+`incremental static generation` can be added as an option by adding the `revalidate` prop and giving it a value in `seconds`. In the example below the page is rebuilt on the server at most every 60 seconds, each time refetching the data. This allows static pages to be used in situations where changing data is used.
 
 > The `context` gives us access to the params, ex: `context.params.id`
 
@@ -85,7 +85,7 @@ export async function getStaticPaths(){
 }
 ```
 
-The paths array is structured like this:
+The `paramsArray` is structured like this:
 
 ```js
 [
