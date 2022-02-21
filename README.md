@@ -9,6 +9,7 @@
 - [working with API routes](https://github.com/Adamskoullos/next-toolbox/blob/main/js-basics/API.md)
 - [Head](https://github.com/Adamskoullos/next-toolbox/blob/main/js-basics/head.md)
 - [Images](https://github.com/Adamskoullos/next-toolbox/blob/main/js-basics/image.md)
+- [Next and Redux Toolkit]()
 
 ---
 
@@ -18,8 +19,5 @@ Todo:
 - [Redirecting]()
 - [Fallback pages]()
 - [Deployment]()
-- [Redux]()
-
----
-
-### Next with TypeScript
+- [TypeScript]()
+- [Testing]()
