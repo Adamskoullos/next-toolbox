@@ -8,7 +8,7 @@
 - [Head](https://github.com/Adamskoullos/next-toolbox/blob/main/js-basics/head.md)
 - [Images](https://github.com/Adamskoullos/next-toolbox/blob/main/js-basics/image.md)
 - [Store](https://github.com/Adamskoullos/next-toolbox/blob/main/js-basics/redux.md)
-- [Config]()
+- [Config](https://github.com/Adamskoullos/next-toolbox/blob/main/js-basics/config.md)
 
 ---
 
