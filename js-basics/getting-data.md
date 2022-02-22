@@ -9,6 +9,7 @@ For pages that use changing data we can either fetch the data at run time on the
 - [getStaticProps](#getStaticProps)
 - [getStaticPaths](#getStaticPaths)
 - [getServerSideProps](#getServerSideProps)
+- [Dynamic Page Workflow](#Dynamic-Page-Workflow)
 
 ---
 
@@ -74,6 +75,8 @@ Example when `data` is an array:
 
 `getStaticPaths` is used when dynamic pages are being statically built. First we need to get the query params for each dynamic path. Then create an array and return that array as the value of `paths`. The `fallback` prop allows us to tell Next to statically generate known pages but if need be, on the fly create dynamic pages at run time if the path does not exist in the paths array.
 
+> `getStaticPaths` is used within dynamic pages, for example `[id].js` and tells Next to create this page for each path. `getStaticProps` is also used here.
+
 ```js
 export async function getStaticPaths(){
     const paramsArray = getPaths();
@@ -91,12 +94,12 @@ The `paramsArray` is structured like this:
 [
   {
     params: {
-      someId: 1,
+      someId: "1",
     },
   },
   {
     params: {
-      someId: 2,
+      someId: "2",
     },
   },
 ];
@@ -130,4 +133,47 @@ export async function getStaticProps(context){
 }
 
 export default SomePage;
+```
+
+## Dynamic Page Workflow
+
+1. Get paths
+2. Get data using the `id` from each path
+3. Pass data into component
+
+```js
+export const getStaticPaths = async () => {
+  const res = await fetch("url");
+  const data = await res.json();
+
+  const paths = data.map((item) => {
+    return {
+      params: { id: item.id.toString() },
+    };
+  });
+
+  return {
+    paths,
+    fallback: true,
+  };
+};
+
+export const getStaticProps = async (context) => {
+  const id = context.params.id;
+  const res = await fetch(`url/${id}`);
+
+  const data = await res.json();
+
+  return {
+    props: { item: data },
+  };
+};
+
+const DetailsPage = ({ item }) => {
+  return (
+    <div>
+      <h1>{item.title}</h1>
+    </div>
+  );
+};
 ```
